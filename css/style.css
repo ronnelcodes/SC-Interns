@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.sc-logo {
+  filter: drop-shadow(5px 5px 5px #222);
+  width: 700px;
+  height: 250px;
+}
+
 a,
 abbr,
 acronym,
@@ -133,13 +146,11 @@ section,
 summary {
   display: block;
 }
-* {
-  box-sizing: border-box;
-}
+
 body {
-  background-color: #35586c;
+  background-color: #4d7d99;
   color: #fffcf0;
-  font: 16px "News Cycle", sans-serif;
+  font: 16px "Open Sans Condensed", sans-serif;
   line-height: 22px;
   text-rendering: optimizeLegibility;
 }
@@ -151,14 +162,68 @@ h5 {
   text-transform: uppercase;
   font-weight: 700;
 }
+
+.testimonials {
+  padding: 40px 0;
+  background: #6a6a6e;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.border {
+  width: 160px;
+  height: 5px;
+  background: #3e3e3f;
+  margin: 26px auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.testimonial {
+  background: #4d7d99;
+  padding: 30px;
+}
+
+.testimonial img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #29292a;
+}
 strong {
   font-weight: 700;
 }
+
 header {
   width: 100%;
   height: 375px;
   text-align: center;
-  background: url(/assets/media/ADAM_LIGHTS.jpg) center;
+  background: url("../img/Internship1.jpg") center;
+  color: rgba(0, 0, 0, 0.7);
   background-size: cover;
   border-bottom: 10px solid #222223;
 }
@@ -172,18 +237,7 @@ header {
     height: 250px;
   }
 }
-.logo {
-  width: 150px;
-  height: 150px;
-  background: url(/assets/media/logo_alpha_new.png) center;
-  background-size: 100%;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  top: 1em;
-  left: 1em;
-}
+
 @media (max-width: 740px) {
   .logo {
     width: 125px;
@@ -203,13 +257,14 @@ header {
   }
 }
 .tag_line {
-  font-weight: 400;
+  font-weight: 900;
   font-style: italic;
   color: rgba(255, 255, 255, 0.6);
   position: absolute;
   bottom: 1.2em;
   padding: 0 1em;
   width: calc(100% - 2em);
+  text-shadow: 1px 1px 2px #000;
 }
 @media (max-width: 570px) {
   .tag_line {
@@ -237,14 +292,7 @@ header {
     height: 250px;
   }
 }
-.promo {
-  position: relative;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+
 .applied {
   margin-bottom: 70px;
   text-align: center;
@@ -325,7 +373,7 @@ header {
   padding: 0.5em 0.5em 0.7em;
   color: #fff8dc;
   border-bottom: 1px solid rgba(255, 248, 220, 0.3);
-  background-color: #252526;
+  background-color: rgba(255, 248, 220, 0.3);
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -384,7 +432,7 @@ header {
   text-align: left;
   color: #fff8dc;
   border-bottom: 1px solid rgba(255, 248, 220, 0.3);
-  background-color: #252526;
+  background-color: #6a6a6e;
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -411,7 +459,7 @@ header {
   text-align: left;
 }
 .intern_areas li {
-  border-bottom: 1px solid #3c3c3d;
+  border-bottom: 1px solid #6a6a6e;
   padding: 0.2em 0.5em 0.4em;
 }
 .intern_areas li:last-child {
@@ -465,8 +513,7 @@ header {
   }
 }
 .inquire_wrapper {
-  background: #dcdcdc url(/assets/media/vanessa_vega_director.jpg) no-repeat
-    right bottom;
+  background: #dcdcdc url(../img/Intern-Director.jpg) no-repeat right bottom;
   background-size: 50%;
   background-position: 112% 100%;
   margin-bottom: 2em;
@@ -517,7 +564,7 @@ header {
   font-size: 1.2em;
 }
 .director_pic {
-  width: 50%;
+  width: auto;
   position: absolute;
   bottom: 0;
   right: 0;
